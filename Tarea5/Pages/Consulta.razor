@@ -1,0 +1,36 @@
+@page "/consulta1"
+@using Models.DB
+
+<div class="row justify-content-center">
+    <div class="col-8 alert alert-info text-center">
+      <h1>Ejercicio 1</h1>
+      <p>Listado de los empleados, nombre, apellido y Telefono</p>
+    </div>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Telefono</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in GetEmployees())
+        {
+            <tr>
+                <td>@empleado.FirstName</td>
+                <td>@empleado.LastName</td>
+                <td>@empleado.HomePhone</td>
+            </tr> 
+        }
+    </tbody>
+
+</table>
+
+@code{
+    //List<Employee> GetEmployees() => new northwindContext().Employees(e => e.FirstName).ToList();
+    List<Employee> GetEmployees() => (from d in new northwindContext().Employees
+                                        select d).ToList();
+}
