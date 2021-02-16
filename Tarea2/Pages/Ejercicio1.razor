@@ -1,0 +1,81 @@
+@using System.Linq;
+@page "/ejercicio1"
+
+<div class="row justify-content-center ">
+    <div class="col-10 alert alert-primary text-center">
+        <h2>Ejercicio 1</h2>
+        <p>Programa que acepte una frase u oración, luego muestre la cantidad de vocales, espacios y consonantes que tiene la misma.</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="card text-center col-6">
+      <h5 class="card-header">
+          Escriba la Frase u Oración
+      </h5>
+      <div class="card-body">
+        <input type="text"  class="form-control mb-3" @bind-value="@frase" placeholder="Escriba la frase aquí...">
+        <button type="button" @onclick="calcular" class="btn btn-primary">Calcular</button>
+        @if (mostrar == true)
+        {
+            <button type="button" @onclick="limpiar" class="ml-1 btn btn-danger">Limpiar</button>
+        }
+      </div>
+      <div class="card-footer text-muted">
+          @if (mostrar == true)
+          {
+            <p>Cantidad de vocales: @voc</p>
+            <p>Cantidad de espacios: @esp</p>
+            <p>Cantidad de consonantes: @cons</p>  
+          }
+
+          <p>Creado por Danny Ozuna Vasquez&copy;</p>
+
+      </div>
+    </div>
+</div>
+
+@code
+{
+    string frase="", frasex="";
+    int voc=0, esp=0, cons=0, i=0; 
+    bool mostrar = false;
+
+    void calcular(){
+        //Aqui estoy preparando los arrgles
+        var vocales = new[] {'A','E', 'I','O', 'U'};
+        var consonantes = new[] {'B', 'C', 'D', 'F', 'G','H','J','K','L','M','N','Ñ','P','Q','R','S','T','V','W','X','Y','Z'};
+        var espacios = new[] {' '};
+
+        //Convirtiendo los frase obtenida en mayusculas
+        frasex = frase.ToUpper();
+
+        //Recorriendo en arreglo de vocales
+        foreach(var vocal in vocales){
+            i += frasex.Count(x => x == vocal);
+        }
+        voc = i;
+        i=0;
+
+        //Recorriendo en arreglo de consonates
+        foreach(var consonante in consonantes){
+            i += frasex.Count(x => x == consonante);
+        }
+        cons= i;
+        i=0;
+
+        //Recorriendo en arrglo de espacios
+        foreach(var espacio in espacios){
+            i += frasex.Count(x => x == espacio);
+        }
+        esp = i;
+        i=0;
+        mostrar = true;
+    }
+
+    void limpiar(){
+        mostrar = false;
+        frase = "";
+    }
+    
+}

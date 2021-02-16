@@ -1,0 +1,60 @@
+@page "/ejercicio5"
+@inject HttpClient http
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 5</h1>
+            <p>Programa que acepte un texto (Textarea), al presionar el boton enviar el mismo debe ser enviado a un grupo de telegram que usted creara para estos fines; debajo de la captura de texto, coloque el link para entrar al gurpo de telegram y el profesor poder probar esto.</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+<div class="row justify-content-center mb-5">
+    <div class="card col-5">
+      <h5 class="card-header text-center">Telegram Send</h5>
+      <div class="card-body">  
+        <textarea @bind="@text" placeholder="Escriba el codigo!..." class="form-control mb-3"></textarea>
+        <button class="btn btn-outline-success ml-2 btn-lg" type="button" @onclick="PostMensaje">Buscar</button>
+        <a href="https://t.me/joinchat/F-_VoiojR3xgfXjF" class="btn btn-outline-primary ml-2 btn-lg" hidden="@estado">Ir link del grupo</a>
+      </div>
+    </div>
+</div>
+@if(Send != null){
+  @if(Send.ok){
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="alert alert-success text-center">
+                <h1>Mensaje Envidado Correctamente!</h1>
+                <p>Grupo: @Send.result.chat.title</p>
+            </div>
+        </div>
+    </div>
+  }else{
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="alert alert-danger text-center">
+                <h1>Mensaje No Envidado</h1>
+            </div>
+        </div>
+    </div>
+  }
+}
+
+
+
+@code{
+    string text = "";
+    bool estado = true;
+    TelegramSend Send =  null;
+
+    private async Task PostMensaje(){
+      Send = await http.GetJsonAsync<TelegramSend>($"https://api.telegram.org/bot1615934679:AAGm4b26BkUwQjQOJG-SpAOoD-0HS5rjHFU/sendMessage?chat_id=-401593762&text={text}");
+      if(Send.ok){
+        estado = false;
+      }
+    }
+
+}

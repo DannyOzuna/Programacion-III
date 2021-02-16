@@ -1,0 +1,61 @@
+@page "/ejercicio6"
+@inject HttpClient Http
+@using System.Net.Http;
+@using System.Net.Http.Json;
+
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 6</h1>
+            <p>Programa que mustre los ultimos 5 videos que usted ha subido a su canal de youtube. (Este programa debe actualizarse de manera automatica, usando la api de youtube)</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+ <button class="btn btn-outline-primary btn-lg mb-3" @onclick="obtener">Obtener Videos</button>
+
+
+@if(rs != null && rs.pageInfo.totalResults > 0){
+    <div class="row d-flex justify-content-between">
+        @foreach (var videos in rs.items)
+        {
+            <div class="card col-2 shadow p-3 mb-3 bg-white rounded">
+              <iframe src="https://www.youtube.com/embed/@videos.id.videoId" class="card-img-top" alt="Video @videos.snippet.title"></iframe>
+              <div class="card-body">
+                <h5 class="card-title">@videos.snippet.title</h5>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"> @(videos.snippet.publishTime.ToString("dddd, dd MMMM yyyy"))</small>
+              </div>
+            </div>
+        }
+    </div>
+}
+
+@if(rs == null && validar == true){
+    <div class="text-center mt-3">
+      <div class="spinner-border text-info" style='width: 4rem; height: 4rem;' role="status">
+      </div>
+    </div>
+}
+ 
+@code{
+    string errores = "";
+    DatosYoutube rs = null;
+    bool validar =  false;
+    private async Task obtener(){
+        validar =  true;
+        rs = await Http.GetFromJsonAsync<DatosYoutube>(("https://www.googleapis.com/youtube/v3/search?key=AIzaSyB5BFlhHvcKpQnLXlAZXnWDmaDTgIwOfcs&channelId=UCQgqPr74n5FlllbAGORhX-g&part=snippet,id&order=date&maxResults=5"));
+
+        if(rs.pageInfo.totalResults > 0){
+            validar = false;
+
+        }else{
+            validar = false;
+            errores = "No se encontro resultados";
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@page "/ejercicio2";
+
+<div class="row justify-content-center ">
+    <div class="col-10 alert alert-primary text-center">
+        <h2>Ejercicio 2</h2>
+        <p>Programa que muestre todos los datos de un usuario random users: https://randomuser.me/api/?results=1</p>
+    </div>
+</div>
+
+<button class="btn btn btn-outline-success btn-lg" @onclick="@GetDatos">Generar</button>
+
+@if(datos.Count > 0){
+    <div class="row justify-content-center">
+        <div class="card text-center" style="width: 18rem;">
+          <img class="card-img-top" src="@url" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">
+                @nombre <br/>
+                Usuario: @user <br/>
+                Contraceña: @pass <br/>
+                Telefono: @phone <br/>
+                Celular: @cel <br/>
+                Email: @email
+            </p>
+          </div>
+        </div>
+    </div>
+}
+
+@code{
+    ConsumirApi api = new ConsumirApi();
+    string nombre="", url="",user="", pass="", phone="", cel ="", email="";
+    List<Result> datos = new List<Result>();
+    private void GetDatos(){
+        datos = api.obtenerDatos();
+        foreach(var persona in datos){
+            nombre = persona.name.title +". "+ persona.name.first +" "+  persona.name.last;
+            url = persona.picture.large;
+            user = persona.login.username;
+            pass = persona.login.password;
+            phone = persona.phone;
+            cel = persona.cell;
+            email = persona.email;
+            break;
+        }
+
+    }
+}

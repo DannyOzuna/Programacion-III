@@ -1,0 +1,46 @@
+@page "/ejercicio5"
+
+<div class="row justify-content-center ">
+    <div class="col-10 alert alert-primary text-center">
+        <h2>Ejercicio 5</h2>
+        <p>Programa que acepte un numero del 1 al 100000, mostrarlo en letras. Ejemplo 90 => noventa. (En español)</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="card col-6">
+      <h5 class="card-header text-center">Conversión de letra a numero</h5>
+      <div class="card-body">
+          <label>Digite el numero:</label>
+          <input type="number" @bind-value="@valor" class="form-control">
+          <button class="btn btn-primary mt-3" @onclick="conversion">Convertir</button>
+          @if(@resultado.Length > 0){
+            <button class="btn btn-danger mt-3 ml-2" @onclick="limpirar">Limpiar</button>
+          }
+      </div>
+    </div>
+</div>
+
+@if (@resultado.Length > 0)
+{
+    <div class="row justify-content-center mt-3">
+        <div class="col-4 alert alert-info text-center">
+            <h2>@resultado</h2>
+        </div>
+    </div>
+}
+
+
+@code{
+    double valor = 0;
+    string resultado = "";
+    Conversion oConversion = new Conversion();
+    private void conversion(){
+        resultado = oConversion.enletras(valor);
+    }
+
+    private void limpirar(){
+        valor = 0;
+        resultado = "";
+    }
+}

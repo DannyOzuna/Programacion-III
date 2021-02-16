@@ -1,0 +1,109 @@
+@page "/ejercicio1"
+@inject HttpClient http;
+@using Services;
+@using System;
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 1</h1>
+            <p>Programa que acepte una cedula, y muestre los datos de una persona: nombre, apellido, fecha de nacimiento, foto y signo del zodiaco. Usar el siguiente api: https://api.adamix.net/apec/cedula/00117600825</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+
+<div class="row justify-content-center">
+    <div class="card col-3">
+      <h5 class="card-header text-center">Consultar Datos Cedula</h5>
+      <div class="card-body">
+        <input type="number" min="0" max="9" class="form-control" @bind-value="@cedula">
+        <button class="btn btn-outline-success mt-3" @onclick="GetPersona">Buscar</button>
+        <button class="btn btn-outline-danger mt-3 ml-1" @onclick="limpiar">Limpiar</button>
+      </div>
+    </div>
+</div>
+
+@if(estado == true){
+    <div class="text-center mt-3">
+      <div class="spinner-border text-info" style='width: 4rem; height: 4rem;' role="status">
+      </div>
+    </div>
+}
+
+
+
+@* Datos Personales *@
+@if(validar){
+    <div class="row justify-content-center mt-4">
+        <div class="col-5 shadow p-3 mb-5 bg-white rounded ">
+            <h2 class="col-12 alert alert-primary rounded text-center">Datos Personales</h2>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <img src="@foto" class="img-thumbnail">
+                </div>
+                <div class="col-6">
+                    <p style="font-size: 13pt;"><span style="font-weight: bold;">Nombre: </span> @nombre</p>  
+                    <p style="font-size: 13pt;"><span style="font-weight: bold;">Apellidos: </span> @apellido</p>  
+                    <p style="font-size: 13pt;"><span style="font-weight: bold;">Fecha de Nacimiento: </span> @FechaNacimiento</p>  
+                    <p style="font-size: 13pt;"><span style="font-weight: bold;">Signo del Zodiaco: </span> @signo</p>  
+                </div>
+            </div>
+        </div>    
+    </div>
+}
+@* Fin datos personales *@
+
+@if(errores != ""){
+    <div class="row justify-content-center mt-3">
+        <div class="col-6">
+            <div class="alert alert-danger text-center">
+                <h1>@errores</h1>
+            </div>
+        </div>
+    </div>
+}
+
+<h3>@prueba</h3>
+
+
+
+@code {
+    string nombre = "", apellido = "", FechaNacimiento="", signo="", foto="", errores="", cedula = "";
+    bool estado = false, validar = false; 
+    string prueba = "";
+    DatosPersona persona;
+    ObtenerSigno oSigno = new ObtenerSigno();
+    
+
+    private async Task GetPersona(){
+        errores = "";
+        estado = true;
+        persona = await http.GetJsonAsync<DatosPersona>("https://api.adamix.net/apec/cedula/" + cedula);
+        validar = persona.ok;
+        if(validar == false){
+            errores = "Cedula Invalida"; 
+            estado = false;
+        }else{
+            nombre = persona.Nombres;
+            apellido = persona.Apellido1 + " " + persona.Apellido2;
+            FechaNacimiento = Convert.ToDateTime(persona.FechaNacimiento).ToShortDateString();
+            int dia = Convert.ToInt16(Convert.ToDateTime(persona.FechaNacimiento).ToString("dd"));
+            int mes = Convert.ToInt16(Convert.ToDateTime(persona.FechaNacimiento).ToString("MM"));
+            signo = oSigno.signo(dia,mes).ToUpper();
+            foto = persona.foto;
+            estado = false;
+        }
+
+    }
+
+    private void limpiar(){
+        errores = "";
+        estado = false;
+        validar = false;
+        cedula = "";
+    }
+
+}

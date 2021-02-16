@@ -1,0 +1,67 @@
+@page "/ejercicio7"
+
+<div class="row justify-content-center ">
+    <div class="col-10 alert alert-primary text-center">
+        <h2>Ejercicio 7</h2>
+        <p>Programa que acepte una calificación (0 a 100), calcule el equivalente literal de la misma y una posible distribución para el siguiente esquema: 40, 30, 30. Ejemplo si digitamos 90 el programa mostrara A => 31, 29, 30</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="card col-6">
+      <h5 class="card-header">
+        Calcular calificación
+      </h5>
+      <div class="card-body">
+          <label>Digite la calificación:</label>
+          <div class="d-flex">
+            <input class="form-control mr-sm-2" @bind-value="@cal" type="number">
+                <button class="btn btn-outline-success my-2 my-sm-0" @onclick="calcular">Calcular</button>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-3">
+    @if(error.Length > 0){
+    <div class="col-5 alert alert-danger text-center">
+        <h2>@error</h2>
+    </div>
+    }else{
+        @if(cal >= 90){
+            <div class="col-5 alert alert-success text-center">
+                <h2>@rel</h2>
+            </div>
+        }else if(cal >= 80){
+            <div class="col-5 alert alert-info text-center">
+                <h2>@rel</h2>
+            </div>
+        }else if (cal >= 70){
+            <div class="col-5 alert alert-warning text-center">
+                <h2>@rel</h2>
+            </div> 
+        }else if(cal >= 1){
+            <div class="col-5 alert alert-danger text-center">
+                <h2>@rel</h2>
+            </div> 
+        }
+    }
+</div>
+
+
+
+@code{
+    ObtenerCalificacion oCalificacion;
+    string error = "", rel="";
+    double cal = 0;
+
+    private void calcular(){
+        if(cal > 100){
+            error = "Calificación máxima: 100";
+        }else{
+            error = "";
+            oCalificacion = new ObtenerCalificacion();
+            rel = oCalificacion.calcular(cal);
+        }
+    }
+}

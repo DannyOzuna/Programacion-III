@@ -1,0 +1,78 @@
+@page "/ejercicio2"
+@inject HttpClient http
+@using Services
+@using System.Globalization;
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 2</h1>
+            <p>Programa que muestre la prediccion del clima actualizada para santo domingo (o su provincia), sin importar cuando se ejecute su aplicacion debe de mostrar estos datos</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+<button @onclick="GetClima" class="btn btn-outline-success mt-3">Obtener Temperatura</button>
+
+@if(estado == true && oCurrent == null){
+    <div class="text-center mt-3">
+      <div class="spinner-border text-info" style='width: 4rem; height: 4rem;' role="status">
+      </div>
+    </div>
+}
+
+@if(oCurrent != null){
+    <div class="row justify-content-center">
+        <div class="card">
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-lg-4 col-12">
+                        <h1 class="display-3">@c°</h1>
+                        <p>Fahrenheit: @f°</p>
+                    </div>
+                    <div class="col-lg-4 col-12"><img style="max-width: 200px;" class="img-fluid mb-2" src="img/@img" alt="@text">
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <p class="h1">
+                            @dia
+                        </p>
+                        <p class="h6">
+                            @fecha
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+@code{
+    bool estado = false;
+    string img = "", dia="", fecha="", text="";
+
+    double c=0, f=0;
+    Current oCurrent;
+    DatosLocation oLocation;
+    string prueba = "";
+    Root oRoot;
+    ObtenerClima oClima = new ObtenerClima();
+    private async Task GetClima(){
+        estado = true;
+        var URL = "http://api.weatherapi.com/v1/current.json?key=cf0558dc8eca488a8a0234546210202&q=country_name=republica%20dominicanaregion=distrito%20nacional&lang=es";
+        oRoot = await http.GetJsonAsync<Root>(URL);
+        oLocation = oClima.ubicacionActual();
+        oCurrent = oRoot.current;
+        img = oCurrent.condition.text+".png";
+        text = oCurrent.condition.text;
+        var d = Convert.ToDateTime(oCurrent.last_updated);
+        byte dx = (byte) d.DayOfWeek;
+        dia = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(d.ToString("dddd", new CultureInfo("es-ES")));
+        c = oCurrent.temp_c;
+        f = oCurrent.temp_f;
+        fecha = Convert.ToDateTime(oCurrent.last_updated).ToString("yyyy/MM/dd");
+    }
+}

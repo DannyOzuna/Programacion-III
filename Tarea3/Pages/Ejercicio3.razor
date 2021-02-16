@@ -1,0 +1,91 @@
+@page "/ejercicio3"
+@using Newtonsoft.Json;
+@using System.Collections;
+@inject HttpClient Http
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 3</h1>
+            <p>Programa que acepte una palabra o frase en español, mostrarlo en ingles.</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+<div class="row justify-content-center mb-5">
+    <div class="card col-3">
+      <h5 class="card-header text-center">Traductor</h5>
+      <div class="card-body d-flex">
+        <input class="form-control me-2" type="search" @bind-value="@word" placeholder="Escriba aquí...">
+        <button class="btn btn-outline-success ml-2" type="submit" @onclick="GetTraduccion">Buscar</button>
+        <button class="btn btn-outline-danger ml-2" type="submit" @onclick="limpiar" hidden="@hidden">Limpiar</button>
+      </div>
+    </div>
+</div>
+
+
+@if(errores.Length == 0 && translation.Length > 0){
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="alert alert-success text-center">
+                <h1>@translation</h1>
+            </div>
+        </div>
+    </div>
+}
+
+@if(translation.Length <= 0 && estado == true){
+    <div class="text-center mt-3">
+      <div class="spinner-border text-info" style='width: 4rem; height: 4rem;' role="status">
+      </div>
+    </div>
+}
+
+@if(errores.Length > 0){
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <div class="alert alert-danger text-center">
+                <h1>@errores</h1>
+            </div>
+        </div>
+    </div>
+}
+
+@code{
+    string translation = "", word = "", errores = "";
+    bool estado = false, hidden = true;
+    public async Task GetTraduccion() {
+        estado = true;
+        translation = "";
+        errores  = "";
+        if (!String.IsNullOrEmpty(word)) {
+            var url = String.Format("https://translate.googleapis.com/translate_a/single?client=gtx&sl={0}&tl={1}&dt=t&q={2}", "es", "en", Uri.EscapeUriString(word));
+            var result = await Http.GetStringAsync(url);
+            if (!String.IsNullOrEmpty(result)) {
+                var jsonData = JsonConvert.DeserializeObject<dynamic>(result);
+                var translationItems = jsonData[0];
+                foreach (object item in translationItems) {
+                    IEnumerable translationLineObject = item as IEnumerable;
+                    IEnumerator translationLineString = translationLineObject.GetEnumerator();
+                    translationLineString.MoveNext();
+                    translation += string.Format(" {0}", Convert.ToString(translationLineString.Current));
+                }
+                if (translation.Length > 1) { translation = translation.Substring(1); estado = false; hidden = false;};
+            }
+        }else{
+            errores = "Campo Vacio";
+            estado = false;
+
+        }
+    }
+
+    private void limpiar(){
+        translation = ""; 
+        word = ""; 
+        errores = "";
+        estado = false;
+        hidden = true;
+    }
+}

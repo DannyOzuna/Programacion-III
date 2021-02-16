@@ -1,0 +1,54 @@
+@page "/ejercicio4"
+
+@*Titulo del Ejercicio 1*@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="alert alert-info text-center">
+            <h1>Ejercicio 4</h1>
+            <p>Programa que acepte el codigo de un video de youtube, mostrar en la pagina el video con opcion a reproducir. Ejemplo ICfaQ8mSppM</p>
+        </div>
+    </div>
+</div>
+@*Fin del titulo*@
+
+<div class="row justify-content-center mb-5">
+    <div class="card col-3">
+      <h5 class="card-header text-center">Obtener Video</h5>
+      <div class="card-body d-flex">
+        <input class="form-control me-2" type="search" @bind-value="@codigo" placeholder="Escriba el codigo!...">
+        <button class="btn btn-outline-success ml-2" type="submit" @onclick="buscar">Buscar</button>
+      </div>
+    </div>
+</div>
+
+
+@if(codigo.Length > 0){
+    <div class="row justify-content-center">
+        <div class="col-auto border shadow p-3 mb-5 bg-white rounded">
+            <iframe width="560" height="315" class="m-1" src="@url" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+}
+
+@if(vacio.Length > 0){
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <div class="alert alert-danger text-center">
+                <h1>@vacio</h1>
+            </div>
+        </div>
+    </div>
+}
+
+@code{
+    string codigo = "", url = "", vacio="";
+
+    private void buscar(){
+        vacio = "";
+        if(codigo.Length != 0){
+            url = "https://www.youtube.com/embed/"+codigo;
+        }else{
+            vacio = "Campo Vacio";
+        }
+    }
+}
