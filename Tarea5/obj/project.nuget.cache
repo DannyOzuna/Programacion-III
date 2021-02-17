@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cZrNuxlDsNA1ho/1Jgl3M6OUbIQnGPYmfglhGJCgm+24eo58kXyHoZ7mA8cfoZ/FsAoRBc093XN4IbCiBgT+/A==",
+  "dgSpecHash": "yvk2XyAljElj6LIz/5d1sofAHfXH7wfDqKy6GVnq0smJ9bk2/dQ7F8X3Xzvt9MTdI/awrt+nq1/TPTSdCVyD8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Tarea5.csproj",
+  "projectFilePath": "C:\\Users\\danny\\Desktop\\Programacion-III\\tarea5\\Tarea5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\danny\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\danny\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

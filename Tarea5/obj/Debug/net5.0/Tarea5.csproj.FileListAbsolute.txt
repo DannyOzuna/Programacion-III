@@ -134,3 +134,5 @@ C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\Tarea5.pdb
 C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\Tarea5.genruntimeconfig.cache
 C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta2.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta2.razor.g.cs
+C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta3.razor.g.cs
+C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\Razor\Pages\Consulta3.razor.g.cs

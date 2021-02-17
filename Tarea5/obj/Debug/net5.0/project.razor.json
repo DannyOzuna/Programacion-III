@@ -111,6 +111,125 @@
         }
       },
       {
+        "HashCode": 1761664902,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta3",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Consulta3"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta3"
+        }
+      },
+      {
+        "HashCode": -259153049,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta3",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.Pages.Consulta3"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta3",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1400141999,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.App",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.App"
+        }
+      },
+      {
+        "HashCode": -1222536512,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.App",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -2144407492,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Shared.SurveyPrompt",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": -2020333125,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Shared.SurveyPrompt",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1696802135,
         "Kind": "Components.Component",
         "Name": "Tarea5.Shared.MainLayout",
@@ -207,59 +326,6 @@
         }
       },
       {
-        "HashCode": -2144407492,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Shared.SurveyPrompt",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": -2020333125,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Shared.SurveyPrompt",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea5.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1312787824,
         "Kind": "Components.Component",
         "Name": "Tarea5.Shared.NavMenu",
@@ -289,39 +355,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Tarea5.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1400141999,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.App",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.App"
-        }
-      },
-      {
-        "HashCode": -1222536512,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.App",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea5.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15934,6 +15967,11 @@
     {
       "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta3.razor",
+      "TargetPath": "Pages\\Consulta3.razor",
       "FileKind": "component"
     },
     {

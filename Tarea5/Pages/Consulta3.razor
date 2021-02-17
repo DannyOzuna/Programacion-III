@@ -1,0 +1,41 @@
+@page "/consulta3"
+@using Models.DB
+@using System;
+
+@* <button @onclick="pruebaz">Prueba</button>
+
+<table>
+    <tbody>
+        @if(emp != null){
+            @foreach (var empleado in pruebaz())
+            {
+                <tr>
+                    <td>@empleado.City</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    public void prueba(){
+        Console.WriteLine("Prueba Impresion");
+    }
+    //List<Employee> GetEmployees() => pruebaz();
+    List<Employee> emp = null;
+
+    public void pruebaz(){
+    
+        var rs = from e in new northwindContext().Employees
+                 group e by e.City;
+                Console.WriteLine("Group");
+        foreach(var rsx in rs){
+                 Console.WriteLine(rsx.Key);
+            
+            emp = rsx.ToList();
+            
+        }
+
+
+    }
+} *@
