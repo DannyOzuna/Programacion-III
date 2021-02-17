@@ -895,11 +895,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Tarea5.csproj",
+      "projectUniqueName": "C:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Tarea5.csproj",
       "projectName": "Tarea5",
-      "projectPath": "C:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Tarea5.csproj",
+      "projectPath": "C:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Tarea5.csproj",
       "packagesPath": "C:\\Users\\danny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\obj\\",
+      "outputPath": "C:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -961,7 +961,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Tarea5.Shared
+namespace Tarea5.Pages
 {
     #line hidden
     using System;
@@ -82,13 +82,31 @@ using Tarea5.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+#nullable restore
+#line 2 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta2.razor"
+using Models.DB;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/consulta2")]
+    public partial class Consulta2 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 31 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta2.razor"
+      
+    List<Product> GetProducts() => (from p in new northwindContext().Products
+                                        orderby p.StandardCost descending
+                                        select p).ToList(); 
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
