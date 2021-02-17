@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Tarea5.csproj",
+  "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Tarea5.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -11,39 +11,6 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
-      {
-        "HashCode": -1478031703,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Pages.Index",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Pages.Index"
-        }
-      },
-      {
-        "HashCode": -1730679538,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Pages.Index",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea5.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
       {
         "HashCode": -1803353126,
         "Kind": "Components.Component",
@@ -107,6 +74,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Tarea5.Pages.Consulta2",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1478031703,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Index",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Index"
+        }
+      },
+      {
+        "HashCode": -1730679538,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Index",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -762809707,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta4",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Consulta4"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta4"
+        }
+      },
+      {
+        "HashCode": 143876957,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta4",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.Pages.Consulta4"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta4",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15950,58 +15983,63 @@
   "RootNamespace": "Tarea5",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta2.razor",
-      "TargetPath": "Pages\\Consulta2.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Index.razor",
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Index.razor",
       "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Shared\\MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta3.razor",
-      "TargetPath": "Pages\\Consulta3.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta.razor",
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Consulta.razor",
       "TargetPath": "Pages\\Consulta.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\_Host.cshtml",
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Consulta4.razor",
+      "TargetPath": "Pages\\Consulta4.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Error.cshtml",
+      "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Shared\\NavMenu.razor",
+      "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\_Host.cshtml",
       "TargetPath": "Pages\\_Host.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Shared\\SurveyPrompt.razor",
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Shared\\MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Consulta2.razor",
+      "TargetPath": "Pages\\Consulta2.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Shared\\NavMenu.razor",
-      "TargetPath": "Shared\\NavMenu.razor",
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion\\Tarea5\\Pages\\Consulta3.razor",
+      "TargetPath": "Pages\\Consulta3.razor",
       "FileKind": "component"
     }
   ],

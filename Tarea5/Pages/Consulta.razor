@@ -32,7 +32,6 @@
 </table>
 
 @code{
-    //List<Employee> GetEmployees() => new northwindContext().Employees(e => e.FirstName).ToList();
     List<Employee> GetEmployees() => (from d in new northwindContext().Employees
                                         select d).ToList();
 }
