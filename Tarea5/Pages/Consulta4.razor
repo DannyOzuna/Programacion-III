@@ -1,0 +1,36 @@
+@page "/consulta4"
+@using Models.DB
+
+<div class="row justify-content-center">
+    <div class="col-8 alert alert-info text-center">
+      <h1>Ejercicio 4</h1>
+      <p>La unidades vendidas de cada producto, mostradas de mayor a menor: producto y cantidad de unidades vendidas</p>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr> 
+            <th>Producto</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in GetConsulta())
+        {
+            <tr>
+                <td>@producto.nombre</td>
+                <td>@producto.cantidad</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code{
+    List<DataConsulta4> GetConsulta() => (from c in new northwindContext().Products
+                    group c by c.Category into r 
+                    select new DataConsulta4 {
+                        nombre = r.Key,
+                        cantidad = r.Count()
+                    }).ToList();
+}

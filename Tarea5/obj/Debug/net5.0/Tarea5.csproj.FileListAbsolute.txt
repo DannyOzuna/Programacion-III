@@ -140,7 +140,11 @@ C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pag
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta3.razor.g.cs
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta2.razor.g.cs
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta3.razor.g.cs
-C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta4.razor.g.cs
-C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta4.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta5.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta5.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta5.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta5.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta4.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta4.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta6.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta6.razor.g.cs

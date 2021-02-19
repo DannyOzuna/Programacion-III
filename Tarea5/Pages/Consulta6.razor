@@ -1,0 +1,14 @@
+@page "/consulta6"
+@code {
+    northwindContext post = new northwindContext();
+    List<DataConsulta6> GetConsulta() => (from od in post.OrderDetails
+                    join o in post.Orders on od.OrderId equals o.Id 
+                    join p in post.Products on od.ProductId equals p.Id
+                    join c in post.Customers on o.CustomerId equals c.Id
+                    orderby od.Quantity descending
+                    select new DataConsulta6 {
+                        producto_codigo = p.ProductCode,
+                        nombre = c.FirstName,
+                        cantidad = od.Quantity
+                    }).ToList();
+}
