@@ -1,0 +1,40 @@
+@page "/consulta5"
+@using Models.DB
+@using System;
+
+<div class="row justify-content-center">
+    <div class="col-8 alert alert-info text-center">
+      <h1>Ejercicio 5</h1>
+      <p>Las unidades vendidas de cada producto, mostradas de mayor a menor: producto y cantidad de unidades vendidas.</p>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <td>Producto</td>
+            <td>Cantidad</td>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var producto in GetConsulta5())
+            {
+                <tr>
+                    <td>@producto.producto</td>
+                    <td>@producto.cantidad</td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+@code {
+  northwindContext postContext = new northwindContext();
+  List<DataConsulta5> GetConsulta5() => (from p in postContext.Products
+                                          join o in postContext.OrderDetails
+                                          on p.Id equals o.ProductId
+                                          orderby o.Quantity descending
+                                          select new DataConsulta5{
+                                            producto = p.ProductName,
+                                            cantidad = o.Quantity
+                                          }).ToList();
+}

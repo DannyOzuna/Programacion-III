@@ -4,10 +4,9 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Tarea5.Shared
+namespace Tarea5.Pages
 {
     #line hidden
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -82,13 +81,44 @@ using Tarea5.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+#nullable restore
+#line 2 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta5.razor"
+using Models.DB;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta5.razor"
+using System;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/consulta4")]
+    public partial class Consulta5 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 30 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta5.razor"
+       
+  northwindContext postContext = new northwindContext();
+  List<DataConsulta5> GetConsulta5() => (from p in postContext.Products
+                                          join o in postContext.OrderDetails
+                                          on p.Id equals o.ProductId
+                                          orderby o.Quantity descending
+                                          select new DataConsulta5{
+                                            producto = p.ProductName,
+                                            cantidad = o.Quantity
+                                          }).ToList();
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

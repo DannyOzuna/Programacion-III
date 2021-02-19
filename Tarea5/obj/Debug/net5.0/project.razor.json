@@ -111,6 +111,39 @@
         }
       },
       {
+        "HashCode": -518954163,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta5",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Consulta5"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta5"
+        }
+      },
+      {
+        "HashCode": -913076642,
+        "Kind": "Components.Component",
+        "Name": "Tarea5.Pages.Consulta5",
+        "AssemblyName": "Tarea5",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Tarea5.Pages.Consulta5"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Tarea5.Pages.Consulta5",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1761664902,
         "Kind": "Components.Component",
         "Name": "Tarea5.Pages.Consulta3",
@@ -140,39 +173,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Tarea5.Pages.Consulta3",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -762809707,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Pages.Consulta4",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Consulta4"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Pages.Consulta4"
-        }
-      },
-      {
-        "HashCode": 143876957,
-        "Kind": "Components.Component",
-        "Name": "Tarea5.Pages.Consulta4",
-        "AssemblyName": "Tarea5",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Tarea5.Pages.Consulta4"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Tarea5.Pages.Consulta4",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16008,11 +16008,6 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta4.razor",
-      "TargetPath": "Pages\\Consulta4.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
@@ -16020,6 +16015,11 @@
     {
       "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\danny\\Desktop\\Programacion-III\\Tarea5\\Pages\\Consulta5.razor",
+      "TargetPath": "Pages\\Consulta5.razor",
       "FileKind": "component"
     },
     {
