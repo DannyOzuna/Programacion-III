@@ -20,3 +20,13 @@ public class DataConsulta6{
     public string nombre {get; set;}
     public decimal cantidad {get; set;}
 }
+
+public class DataConsulta7 {
+    public decimal cantidad {get; set;}
+}
+
+public class Dataconsulta8{
+    public int id {get; set;}
+    public string nombre {get; set;}
+    public int cantidad {get; set;}
+}

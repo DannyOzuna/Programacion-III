@@ -1,0 +1,36 @@
+@page "/consulta7"
+
+<div class="row justify-content-center">
+    <div class="col-8 alert alert-info text-center">
+      <h1>Ejercicio 7</h1>
+    </div>
+</div>
+
+
+
+<table class="table table-striped table-hover">
+    <thead>
+        <th>Cantidad</th>
+    </thead>
+    <tbody>
+        @foreach (var item in GetConsulta())
+        {
+            cantidadx += item.cantidad;
+        }
+        <tr>
+            <td>@(cantidadx)</td>
+        </tr>
+    </tbody>
+</table>
+
+
+@code{
+    decimal cantidadx = 0;
+    northwindContext get = new northwindContext();
+    List<DataConsulta7> GetConsulta() => (from od in get.OrderDetails
+                                            join o in get.Orders on od.OrderId equals o.Id
+                                            group od by od.Quantity into r
+                                            select new DataConsulta7 {
+                                                cantidad = r.Key
+                                            }).ToList();
+}

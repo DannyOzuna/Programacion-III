@@ -14,7 +14,7 @@ namespace Tarea5.Models.DB
             PurchaseOrderDetails = new HashSet<PurchaseOrderDetail>();
         }
 
-        public string SupplierIds { get; set; }
+        public int SupplierIds { get; set; }
         public int Id { get; set; }
         public string ProductCode { get; set; }
         public string ProductName { get; set; }

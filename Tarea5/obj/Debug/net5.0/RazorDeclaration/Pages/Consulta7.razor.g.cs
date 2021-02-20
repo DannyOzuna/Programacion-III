@@ -89,14 +89,29 @@ using Models.DB;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/consulta7")]
+    public partial class Consulta7 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 27 "C:\Users\danny\Desktop\Programacion-III\tarea5\Pages\Consulta7.razor"
+      
+    decimal cantidadx = 0;
+    northwindContext get = new northwindContext();
+    List<DataConsulta7> GetConsulta() => (from od in get.OrderDetails
+                                            join o in get.Orders on od.OrderId equals o.Id
+                                            group od by od.Quantity into r
+                                            select new DataConsulta7 {
+                                                cantidad = r.Key
+                                            }).ToList();
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

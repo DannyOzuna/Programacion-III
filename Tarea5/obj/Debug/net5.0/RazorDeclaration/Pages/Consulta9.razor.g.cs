@@ -89,14 +89,27 @@ using Models.DB;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/consulta9")]
+    public partial class Consulta9 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 28 "C:\Users\danny\Desktop\Programacion-III\tarea5\Pages\Consulta9.razor"
+      
+    List<Shipper> GetShippers() => (from s in new northwindContext().Shippers
+                                    group s by s.Company into r 
+                                    select new Shipper {
+                                        Company = r.Key,
+                                        cantidad = r.Count()
+                                    }).ToList();
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
