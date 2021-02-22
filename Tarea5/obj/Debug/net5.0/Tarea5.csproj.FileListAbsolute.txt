@@ -63,8 +63,6 @@ C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Tarea5.dll
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\ref\Tarea5.dll
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Tarea5.pdb
 C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Tarea5.genruntimeconfig.cache
-C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta.razor.g.cs
-C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\Tarea5\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\danny\Desktop\Programacion-III\Tarea5\bin\Debug\net5.0\appsettings.json
 C:\Users\danny\Desktop\Programacion-III\Tarea5\bin\Debug\net5.0\Tarea5.StaticWebAssets.xml
@@ -160,3 +158,15 @@ C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\RazorDeclaration
 C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta9.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\Razor\Pages\Consulata10.razor.g.cs
 C:\Users\danny\Desktop\Programacion-III\tarea5\obj\Debug\net5.0\Razor\Pages\Consulta9.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulata10.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta1.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta7.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta8.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\Consulta9.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulata10.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta1.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta7.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta8.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\Consulta9.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\RazorDeclaration\Pages\BuscarColumna.razor.g.cs
+C:\Users\danny\Desktop\Programacion\Tarea5\obj\Debug\net5.0\Razor\Pages\BuscarColumna.razor.g.cs
