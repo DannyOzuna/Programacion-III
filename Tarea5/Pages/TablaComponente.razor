@@ -1,0 +1,27 @@
+@typeparam TItem
+
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            @TableHeader
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Items)
+        {
+            <tr>
+                @TableBody(item)
+            </tr> 
+        }
+    </tbody>
+
+</table>
+
+@code{
+    [Parameter]
+    public RenderFragment TableHeader {get; set;}
+    [Parameter]
+    public RenderFragment<TItem> TableBody {get; set;}
+    [Parameter]
+    public IReadOnlyList<TItem> Items {get; set;}
+}

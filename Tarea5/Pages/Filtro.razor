@@ -1,0 +1,16 @@
+
+
+<div class="row">
+    <form class="d-flex">
+      <input class="form-control m-3" type="search" placeholder="Buscar" aria-label="@nombre" @oninput="buscarTexto">
+    </form>
+</div>
+
+
+@code{
+    [Parameter]
+    public string nombre {get; set;}
+
+    [Parameter]
+    public EventCallback<ChangeEventArgs> buscarTexto {get; set;}
+}

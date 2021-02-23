@@ -13,77 +13,77 @@ namespace Tarea5.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 1 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 2 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 3 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 4 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 5 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 6 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 7 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 8 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 9 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Tarea5;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\danny\Desktop\Programacion\Tarea5\_Imports.razor"
+#line 10 "C:\Users\danny\Desktop\Programacion-III\Tarea5\_Imports.razor"
 using Tarea5.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\danny\Desktop\Programacion\Tarea5\Pages\Consulta1.razor"
+#line 2 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta1.razor"
 using Models.DB;
 
 #line default
@@ -98,17 +98,13 @@ using Models.DB;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\danny\Desktop\Programacion\Tarea5\Pages\Consulta1.razor"
+#line 28 "C:\Users\danny\Desktop\Programacion-III\Tarea5\Pages\Consulta1.razor"
       
-    private string PersonaFiltro = "";
-    public List<Employee> filtrar {get; set;}
-    //public List<Employee> buscar {get; set;}
-     List<Employee> GetEmployees() => (from d in new northwindContext().Employees
+    public List<Employee> filtrar = (from d in new northwindContext().Employees
                                         select d).ToList();
-
-    public void buscarTextx(ChangeEventArgs changeEventArgs){
+    public void buscarTexto(ChangeEventArgs changeEventArgs){
         string buscarText = changeEventArgs.Value.ToString();
-        GetEmployees().Where(e => e.FirstName.Contains(buscarText)).ToList();
+        filtrar = new northwindContext().Employees.Where(e => e.FirstName.Contains(buscarText) || e.LastName.Contains(buscarText) || e.HomePhone.Contains(buscarText)).ToList();
     }
 
 
