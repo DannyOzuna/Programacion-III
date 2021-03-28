@@ -1,0 +1,31 @@
+@page "/registrar"
+@inject IRepositorioRobos RepositorioRobos
+
+<table class="table table-striped"> 
+    <thead>
+        <tr>
+            <th>Cedula</th>
+            <th>Informacion</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(lsRobos != null){
+            @foreach (var item in lsRobos)
+            {
+                <tr>
+                    <td>@item.cedula</td>
+                    <td>@item.info_robo</td>
+                    <td>@item.valor</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code{
+    List<Tb_robos> lsRobos = new List<Tb_robos>();
+    protected override async Task OnInitializedAsync(){
+        lsRobos = await RepositorioRobos.GetTb_Robos();
+    }
+} 

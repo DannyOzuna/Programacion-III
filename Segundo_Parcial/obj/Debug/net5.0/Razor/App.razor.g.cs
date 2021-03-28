@@ -74,6 +74,20 @@ using Segundo_Parcial;
 #nullable disable
 #nullable restore
 #line 10 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
+using Segundo_Parcial.Data.Repositorio;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
+using Segundo_Parcial.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial.Shared;
 
 #line default

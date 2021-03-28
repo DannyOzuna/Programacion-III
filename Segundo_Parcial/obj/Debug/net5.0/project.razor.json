@@ -111,6 +111,39 @@
         }
       },
       {
+        "HashCode": 274236466,
+        "Kind": "Components.Component",
+        "Name": "Segundo_Parcial.Pages.Registrar",
+        "AssemblyName": "Segundo_Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Registrar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Segundo_Parcial.Pages.Registrar"
+        }
+      },
+      {
+        "HashCode": -1548063831,
+        "Kind": "Components.Component",
+        "Name": "Segundo_Parcial.Pages.Registrar",
+        "AssemblyName": "Segundo_Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Segundo_Parcial.Pages.Registrar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Segundo_Parcial.Pages.Registrar",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 825343579,
         "Kind": "Components.Component",
         "Name": "Segundo_Parcial.Shared.SurveyPrompt",
@@ -15965,6 +15998,11 @@
       "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Registrar.razor",
+      "TargetPath": "Pages\\Registrar.razor",
+      "FileKind": "component"
     }
   ],
   "SerializationFormat": "0.2"

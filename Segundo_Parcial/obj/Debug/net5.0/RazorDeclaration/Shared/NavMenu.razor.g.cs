@@ -77,6 +77,20 @@ using Segundo_Parcial;
 #nullable disable
 #nullable restore
 #line 10 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
+using Segundo_Parcial.Data.Repositorio;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
+using Segundo_Parcial.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial.Shared;
 
 #line default
@@ -90,7 +104,7 @@ using Segundo_Parcial.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/NavMenu.razor"
+#line 23 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

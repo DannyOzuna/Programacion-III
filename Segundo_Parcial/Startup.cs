@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Segundo_Parcial.Data;
+using Segundo_Parcial.Data.Repositorio;
+using Microsoft.EntityFrameworkCore;
 
 namespace Segundo_Parcial
 {
@@ -29,6 +31,10 @@ namespace Segundo_Parcial
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddDbContext<AppDbContext>(
+                optionsAction => optionsAction.UseMySql(Configuration.GetConnectionString("Conexion"), Microsoft.EntityFrameworkCore.ServerVersion.FromString("10.4.18-mariadb"))
+            );
+            services.AddScoped<IRepositorioRobos, RepositorioRobos>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
