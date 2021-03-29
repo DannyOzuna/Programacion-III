@@ -13,84 +13,84 @@ namespace Segundo_Parcial.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 1 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 2 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 3 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 4 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 5 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 6 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 7 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 8 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 9 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 10 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 11 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial.Data.Repositorio;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 12 "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor"
+#line 12 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor"
 using Segundo_Parcial.Models;
 
 #line default
@@ -104,7 +104,7 @@ using Segundo_Parcial.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "/Users/dannyozuna/Desktop/Segundo_Parcial/Shared/SurveyPrompt.razor"
+#line 12 "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/SurveyPrompt.razor"
        
     // Demonstrates how a parent component can supply parameters
     [Parameter]

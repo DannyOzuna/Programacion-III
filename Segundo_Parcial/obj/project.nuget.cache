@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tEWEBjZReG5FW7ui2SchWX8uJJB/i0rkaIdWpCM2YVwIbhixqqDDB/BqkTHYuMJ7H6+/82YDgBZ704PV1tWO3Q==",
+  "dgSpecHash": "j0liylB3Wt+LCJc9TNdtgzoXZt0d1tVRQ1Eax3mjI49YGgYOsyf9WjqfKi1vxikqQ6+pGeApZfwn5pc9bDx/8A==",
   "success": true,
-  "projectFilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Segundo_Parcial.csproj",
+  "projectFilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Segundo_Parcial.csproj",
   "expectedPackageFiles": [
     "/Users/dannyozuna/.nuget/packages/microsoft.aspnetcore.blazor.httpclient/3.2.0-preview3.20168.3/microsoft.aspnetcore.blazor.httpclient.3.2.0-preview3.20168.3.nupkg.sha512",
     "/Users/dannyozuna/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

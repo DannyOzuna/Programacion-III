@@ -3,6 +3,7 @@
 @inject HttpClient Http
 @using System.Net.Http
 @using System.Net.Http.Json
+@inject NavigationManager NavigationManager
 
 <div class="row justify-content-center">
     <div class="col-10 text-center">
@@ -18,8 +19,8 @@
               <div class="container-fluid">
                 <a class="navbar-brand"></a>
                 <div class="d-flex">
-                  <input class="form-control me-2 mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                  <button class="btn btn-outline-success">Buscar</button>
+                  <input class="form-control me-2 mr-2" type="search" @bind-value="cedula" placeholder="Buscar" aria-label="Buscar">
+                  <button class="btn btn-outline-success" @onclick="ObternerDatos">Buscar</button>
                 </div>
               </div>
             </div>
@@ -80,6 +81,12 @@
 
 @code{
     Tb_robos oRobos = new Tb_robos();
+    string cedula = "";
+    private async Task ObternerDatos(){
+        if(cedula != ""){
+            oRobos = await RepositorioRobos.GetTb_Robos(cedula);
+        }
+    }
     private async Task GuardarDato(){
         //Para obtener la latitud y longitud mediante la ip
         var datos = Http.GetFromJsonAsync<Localicacion>("http://ip-api.com/json/");
@@ -89,5 +96,14 @@
         oRobos.latitud = rs.lat.ToString();
         oRobos.longitud = rs.lon.ToString();
         var crear = await RepositorioRobos.Add(oRobos);
+
+        if(crear == null){
+            await RepositorioRobos.Update(oRobos.id, oRobos);
+        }
+        NavigationManager.NavigateTo("/");
     }
-}
+    protected override void OnInitialized()
+    {
+        oRobos.fecha = DateTime.Now;
+    }
+}        

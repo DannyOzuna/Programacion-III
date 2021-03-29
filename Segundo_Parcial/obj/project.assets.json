@@ -1856,11 +1856,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dannyozuna/Desktop/Segundo_Parcial/Segundo_Parcial.csproj",
+      "projectUniqueName": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Segundo_Parcial.csproj",
       "projectName": "Segundo_Parcial",
-      "projectPath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Segundo_Parcial.csproj",
+      "projectPath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Segundo_Parcial.csproj",
       "packagesPath": "/Users/dannyozuna/.nuget/packages/",
-      "outputPath": "/Users/dannyozuna/Desktop/Segundo_Parcial/obj/",
+      "outputPath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dannyozuna/.nuget/NuGet/NuGet.Config"
