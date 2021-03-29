@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Segundo_Parcial.csproj",
+  "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Segundo_Parcial.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -45,39 +45,6 @@
         }
       },
       {
-        "HashCode": -202060826,
-        "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Pages.Index",
-        "AssemblyName": "Segundo_Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1235796373,
-        "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Pages.Index",
-        "AssemblyName": "Segundo_Parcial",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Segundo_Parcial.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -2038291713,
         "Kind": "Components.Component",
         "Name": "Segundo_Parcial.Pages.FetchData",
@@ -107,6 +74,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Segundo_Parcial.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -202060826,
+        "Kind": "Components.Component",
+        "Name": "Segundo_Parcial.Pages.Index",
+        "AssemblyName": "Segundo_Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Segundo_Parcial.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1235796373,
+        "Kind": "Components.Component",
+        "Name": "Segundo_Parcial.Pages.Index",
+        "AssemblyName": "Segundo_Parcial",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Segundo_Parcial.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Segundo_Parcial.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -144,55 +144,35 @@
         }
       },
       {
-        "HashCode": 825343579,
+        "HashCode": -474119930,
         "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Shared.SurveyPrompt",
+        "Name": "Segundo_Parcial.Shared.NavMenu",
         "AssemblyName": "Segundo_Parcial",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Shared.SurveyPrompt"
+          "Common.TypeName": "Segundo_Parcial.Shared.NavMenu"
         }
       },
       {
-        "HashCode": -1406277884,
+        "HashCode": 1752140030,
         "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Shared.SurveyPrompt",
+        "Name": "Segundo_Parcial.Shared.NavMenu",
         "AssemblyName": "Segundo_Parcial",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Segundo_Parcial.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "Segundo_Parcial.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Shared.SurveyPrompt",
+          "Common.TypeName": "Segundo_Parcial.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -293,35 +273,55 @@
         }
       },
       {
-        "HashCode": -474119930,
+        "HashCode": 825343579,
         "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Shared.NavMenu",
+        "Name": "Segundo_Parcial.Shared.SurveyPrompt",
         "AssemblyName": "Segundo_Parcial",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Shared.NavMenu"
+          "Common.TypeName": "Segundo_Parcial.Shared.SurveyPrompt"
         }
       },
       {
-        "HashCode": 1752140030,
+        "HashCode": -1406277884,
         "Kind": "Components.Component",
-        "Name": "Segundo_Parcial.Shared.NavMenu",
+        "Name": "Segundo_Parcial.Shared.SurveyPrompt",
         "AssemblyName": "Segundo_Parcial",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Segundo_Parcial.Shared.NavMenu"
+            "TagName": "Segundo_Parcial.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Segundo_Parcial.Shared.NavMenu",
+          "Common.TypeName": "Segundo_Parcial.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15950,58 +15950,58 @@
   "RootNamespace": "Segundo_Parcial",
   "Documents": [
     {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/_Imports.razor",
-      "TargetPath": "_Imports.razor",
-      "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/SurveyPrompt.razor",
-      "TargetPath": "Shared\\SurveyPrompt.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/_Host.cshtml",
-      "TargetPath": "Pages\\_Host.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/App.razor",
-      "TargetPath": "App.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/MainLayout.razor",
-      "TargetPath": "Shared\\MainLayout.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Index.razor",
-      "TargetPath": "Pages\\Index.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Shared/NavMenu.razor",
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Shared/NavMenu.razor",
       "TargetPath": "Shared\\NavMenu.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Shared/MainLayout.razor",
+      "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
     },
     {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Error.cshtml",
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/_Host.cshtml",
+      "TargetPath": "Pages\\_Host.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/Counter.razor",
+      "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/dannyozuna/Documents/Programacion-III/Segundo_Parcial/Pages/Registrar.razor",
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/Index.razor",
+      "TargetPath": "Pages\\Index.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/App.razor",
+      "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/_Imports.razor",
+      "TargetPath": "_Imports.razor",
+      "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/FetchData.razor",
+      "TargetPath": "Pages\\FetchData.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Pages/Registrar.razor",
       "TargetPath": "Pages\\Registrar.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/Users/dannyozuna/Desktop/Segundo_Parcial/Shared/SurveyPrompt.razor",
+      "TargetPath": "Shared\\SurveyPrompt.razor",
       "FileKind": "component"
     }
   ],

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Segundo_Parcial.Data;
 using Segundo_Parcial.Data.Repositorio;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Http;
 
 namespace Segundo_Parcial
 {
@@ -30,9 +31,10 @@ namespace Segundo_Parcial
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddSingleton<HttpClient>();
             services.AddSingleton<WeatherForecastService>();
             services.AddDbContext<AppDbContext>(
-                optionsAction => optionsAction.UseMySql(Configuration.GetConnectionString("Conexion"), Microsoft.EntityFrameworkCore.ServerVersion.FromString("10.4.18-mariadb"))
+                optionsAction => optionsAction.UseSqlServer(Configuration.GetConnectionString("Conexion"))
             );
             services.AddScoped<IRepositorioRobos, RepositorioRobos>();
         }

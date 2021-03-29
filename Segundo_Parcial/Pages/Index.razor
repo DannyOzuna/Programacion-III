@@ -1,7 +1,39 @@
 @page "/"
+@inject IRepositorioRobos RepositorioRobos
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<table class="table table-striped"> 
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Cedula</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(lsRobos != null){
+            @foreach (var item in lsRobos)
+            {
+                <tr>
+                    <td>@item.nombre</td>
+                    <td>@item.cedula</td>
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+
+@code {
+    List<Tb_robos> lsRobos = new List<Tb_robos>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        lsRobos = await RepositorioRobos.GetTb_Robos();
+    }
+}

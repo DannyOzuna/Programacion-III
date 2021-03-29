@@ -1,31 +1,93 @@
 @page "/registrar"
 @inject IRepositorioRobos RepositorioRobos
+@inject HttpClient Http
+@using System.Net.Http
+@using System.Net.Http.Json
 
-<table class="table table-striped"> 
-    <thead>
-        <tr>
-            <th>Cedula</th>
-            <th>Informacion</th>
-            <th>Valor</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(lsRobos != null){
-            @foreach (var item in lsRobos)
-            {
-                <tr>
-                    <td>@item.cedula</td>
-                    <td>@item.info_robo</td>
-                    <td>@item.valor</td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>
+<div class="row justify-content-center">
+    <div class="col-10 text-center">
+        <h1 class="alert alert-info">Registro de Robos</h1>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-8">
+        <div class="card shadow p-3 mb-5 bg-body rounded">
+          <div class="card-header">
+            <div class="navbar navbar-light bg-light">
+              <div class="container-fluid">
+                <a class="navbar-brand"></a>
+                <div class="d-flex">
+                  <input class="form-control me-2 mr-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                  <button class="btn btn-outline-success">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+            <EditForm Model="oRobos" OnValidSubmit="@(() => GuardarDato())"> 
+                <div class="card-body">
+                    <DataAnnotationsValidator/>
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-5">
+                            <label>Nombre: </label>
+                            <InputText @bind-Value="oRobos.nombre" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.nombre"/>
+                        </div>
+                        <div class="col-5">
+                            <label>Cedula: </label>
+                            <InputText @bind-Value="oRobos.cedula" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.cedula"/>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-5">
+                            <label>Fecha: </label>
+                            <InputDate @bind-Value="oRobos.fecha" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.fecha"/>
+                        </div>
+                        <div class="col-5">
+                            <label>Valor: </label>
+                            <InputNumber @bind-Value="oRobos.valor" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.valor"/>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-5">
+                            <label>Lugar: </label>
+                            <InputText @bind-Value="oRobos.lugar" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.lugar"/>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <label>Información: </label>
+                            <InputTextArea @bind-Value="oRobos.info_robo" class="form-control"/>
+                            <ValidationMessage For="() => oRobos.info_robo"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-outline-primary col-8 bn-lg">Guardar</button>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
 
 @code{
-    List<Tb_robos> lsRobos = new List<Tb_robos>();
-    protected override async Task OnInitializedAsync(){
-        lsRobos = await RepositorioRobos.GetTb_Robos();
+    Tb_robos oRobos = new Tb_robos();
+    private async Task GuardarDato(){
+        //Para obtener la latitud y longitud mediante la ip
+        var datos = Http.GetFromJsonAsync<Localicacion>("http://ip-api.com/json/");
+        var rs = datos.Result;
+
+        //Guardando el Registro
+        oRobos.latitud = rs.lat.ToString();
+        oRobos.longitud = rs.lon.ToString();
+        var crear = await RepositorioRobos.Add(oRobos);
     }
-} 
+}

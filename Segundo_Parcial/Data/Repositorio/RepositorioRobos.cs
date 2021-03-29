@@ -14,5 +14,15 @@ namespace Segundo_Parcial.Data.Repositorio{
         public async Task<List<Tb_robos>> GetTb_Robos(){
             return await context.tb_Robos.ToListAsync();
         }
+
+        public async Task<Tb_robos> Add(Tb_robos oRobos){
+            if(oRobos != null){
+                await context.AddAsync(oRobos);
+                await context.SaveChangesAsync();
+                return oRobos;
+            }else{
+                return null;
+            }
+        }
     }
 }
